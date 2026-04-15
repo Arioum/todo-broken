@@ -93,8 +93,7 @@ checkBrowsers(paths.appPath, isInteractive)
       paths.publicUrlOrPath.slice(0, -1)
     );
     const devSocket = {
-      warnings: warnings =>
-        devServer.sockWrite(devServer.sockets, 'warnings', warnings),
+      warnings: () => {},
       errors: errors =>
         devServer.sockWrite(devServer.sockets, 'errors', errors),
     };
